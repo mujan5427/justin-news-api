@@ -1,8 +1,8 @@
-var channel = function(req) {
+var channel = function(req, res) {
     
-  console.log(req.query);
+  // console.log(req.body);
 
-  return 'Here is channel.js';
+  res.end('Here is channel.js');
  
 }
  

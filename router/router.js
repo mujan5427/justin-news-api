@@ -1,18 +1,37 @@
+var getRouterName_arr = ['/news', '/channel', '/login'];
+
 var channel = require('../controller/channel.js');
 
 
 var appRouter = function(app) {
-
-  app.get("/", function(req, res) {
-    res.send(channel(req));
+  
+  app.use(function(req, res, next) {
+  
+    if (getRouterName_arr.indexOf(req.path) != -1) {
+      
+      // 判斷是合法的API路徑，執行接下來的 middleware function
+      next();
+      
+    } else {
+      
+      // 判斷是不合法的API路徑，回傳錯誤訊息
+      res.end('This is a invalid path : ' + req.path);
+    }
+  
   });
   
-  app.get("/channel", function(req, res) {
-    res.send("channel");
+  /*
+   * API Endpoint Lists
+   *
+   * --------------------------------------------------
+   */
+  
+  app.get("/channel", function(err, req, res) {
+    channel(err, req, res);
   });
   
   app.get("/news", function(req, res) {
-    res.send("news");
+    res.end("news");
   });
  
 }
