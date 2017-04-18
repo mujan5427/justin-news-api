@@ -1,9 +1,7 @@
-var channel = function(req, res) {
-    
-  // console.log(req.body);
+module.exports = function(err, req, res) {
 
-  res.end('Here is channel.js');
- 
+  console.log(req);
+
+  // res.end('Here is channel.js');
+
 }
- 
-module.exports = channel;
