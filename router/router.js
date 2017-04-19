@@ -1,6 +1,7 @@
 var getRouterName_arr = ['/news', '/channel', '/login'];
 
 var channel = require('../controller/channel.js');
+var news = require('../controller/news.js');
 
 
 module.exports = function(app) {
@@ -29,11 +30,12 @@ module.exports = function(app) {
 
   app.get("/channel-news/list", function(req, res) {
 
-    channel(req, res);  
+    channel.channelNews(req, res);
   });
 
-  app.get("/news", function(req, res) {
-    res.end("news");
+  app.get("/random-news/list", function(req, res) {
+
+    news.randomNews(req, res);
   });
 
 }
