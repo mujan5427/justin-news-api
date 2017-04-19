@@ -38,4 +38,9 @@ module.exports = function(app) {
     news.randomNews(req, res);
   });
 
+  app.get("/news-content", function(req, res) {
+
+    news.newsContent(req, res);
+  });
+
 }

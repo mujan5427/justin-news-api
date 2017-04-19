@@ -26,7 +26,7 @@ exports.channelNews = function(req, res) {
     page_offset = (current_page * page_limit) - page_limit;
   }
 
-  // 查詢指定頻道的新聞總數
+  // 查詢 指定頻道的新聞總數
   var sql = `
   SELECT count(*) AS page_total
   FROM news
@@ -37,7 +37,7 @@ exports.channelNews = function(req, res) {
     // 計算指定頻道的頁數
     var page_total = Math.ceil(rows[0].page_total / page_limit);
 
-    // 查詢指定頻道、指定頁面的新聞列表
+    // 查詢 指定頻道、指定頁面的新聞列表
     var sql = `
     SELECT news_id, main_image, title, description, author, publish_date
     FROM news
