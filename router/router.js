@@ -26,8 +26,10 @@ module.exports = function(app) {
    * --------------------------------------------------
    */
 
-  app.get("/channel-news/list", function(err, req, res) {
-    channel(err, req, res);
+
+  app.get("/channel-news/list", function(req, res) {
+
+    channel(req, res);  
   });
 
   app.get("/news", function(req, res) {

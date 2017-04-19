@@ -1,6 +1,6 @@
 var mysql = require('mysql')
 
-module.exports = function(sql_statment) {
+module.exports = function() {
 
   // Clound 9 DataBase Setting
   // var connection = mysql.createConnection({
@@ -26,4 +26,4 @@ module.exports = function(sql_statment) {
 
   // connection.end();
 
-}
+}()
