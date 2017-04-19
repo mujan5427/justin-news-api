@@ -15,6 +15,7 @@ module.exports = function(req, res) {
     'literature-and-art': '藝文',
   };
 
+  // 處理 query string
   if (req.query !== {}) {
 
     channel_type = req.query.channel_type;
@@ -25,7 +26,10 @@ module.exports = function(req, res) {
     page_offset = (current_page * page_limit) - page_limit;
   }
 
-  var sql = `SELECT count(*) AS page_total FROM news`;
+  var sql = `
+  SELECT count(*) AS page_total
+  FROM news
+  WHERE channel_type = '${channel_type}'`;
 
   db.query(sql, function (err, rows, fields) {
 
