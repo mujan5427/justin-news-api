@@ -1,0 +1,197 @@
+/* 裝置螢幕寬度在 768px 以上 */
+
+.logo {
+  font-size: 2.625em;
+}
+
+.show-in-mweb {
+  display: none;
+}
+
+.content {
+  padding: 70px 30px 0;
+}
+
+.slider-bar-image-clip-box {
+  width: 100%;
+  max-width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.slider-bar-title {
+  box-shadow: 0 0 8px 1px rgba(0,0,0,.2);
+  font-size: 2.4em;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding: 20px;
+  border-radius: 5px;
+  background: #ffffff;
+  margin: 0 7%;
+  position: relative;
+  bottom: 80px;
+}
+
+.index-section {
+  margin: 30px 6% 0;
+}
+
+.news-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.row-2 {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.row-3 {
+  width: 33.3%;
+  padding: 15px;
+}
+
+.row-2 * div.news-list-figcaption {
+  font-size: 1.8em;
+}
+
+.row-2 img {
+  max-height: 300px;
+}
+
+.row-3 img {
+  max-height: 250px;
+}
+
+.footer-section-main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.footer-section-legal-declaration {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 50px 0;
+  margin-top: 70px;
+  border-top: 1px solid #cccccc;
+}
+
+.article-section-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.article-section:nth-of-type(1) {
+  width: 70%;
+  order: 1;
+}
+
+.article-section:nth-of-type(2) {
+  order: 3;
+}
+
+.article-section:nth-of-type(3) {
+  width: calc(30% - 80px);
+  margin-top: 40px;
+  margin-left: 80px;
+  order: 2;
+}
+
+.article-content {
+  margin: 40px 7% 0;
+}
+
+/* signup.html is below this comment */
+
+.signup-section {
+  margin: 30px 20%;
+}
+
+/* Popup Dialog Login is below this comment */
+
+.dialog-box {
+  position: relative;
+  background: #ffffff;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px 20px;
+  top: 50%;
+  left: 50%;
+  /* calc(-50%, - 35px) The 35px equal height of header divided by 2*/
+  transform: translate(-50%, calc(-50% - 35px));
+}
+
+/* channel.html is below this comment */
+
+.channel-section-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.channel-section:nth-of-type(1) {
+  width: 70%;
+}
+
+.channel-section:nth-of-type(2) {
+  width: calc(30% - 80px);
+  margin-left: 80px;
+}
+
+.channel-title {
+  margin: 40px 0 20px;
+}
+
+.channel-list {
+  margin-bottom: 50px;
+  font-size: 1.4em;
+}
+
+.channel-photo {
+  min-width: 300px;
+  max-width: 300px;
+  height: 300px;
+}
+
+.channel-photo > img {
+  max-height: 100%;
+  margin-left: -25%;
+}
+
+.channel-description > a:nth-child(2) {
+  display: block;
+  line-height: 1.6em;
+  max-height: 6.4em;
+  overflow: hidden;
+}
+
+.channel-list > li:nth-child(1) {
+  flex-flow: column nowrap;
+  padding: 0 0 15px;
+}
+
+.channel-list > li:nth-child(1) > .channel-photo {
+  height: inherit;
+  max-width: inherit;
+  margin-right: 0;
+}
+
+.channel-list > li:nth-child(1) > .channel-photo img {
+  margin-left: 0;
+}
+
+.channel-list > li:nth-child(1) > .channel-description > a:nth-child(2) {
+  display: none;
+}
+
+.channel-list > li:nth-child(1) > .channel-description * {
+  margin: 15px 0;
+}

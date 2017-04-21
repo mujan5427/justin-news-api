@@ -1,0 +1,116 @@
+.index-section {
+  margin-bottom: 70px;
+
+  @include mq-medium-up {
+    margin: 30px 6% 0;
+  }
+}
+
+.index-section > h2 {
+  margin: 0 15px 30px;
+  padding-top: 30px;
+  font-size: 2em;
+  border-top: 2px solid $horizontal-line-color;
+}
+
+.news-list {
+  font-size: 1.3em;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include mq-medium {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+
+  @include mq-medium-up {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+.news-list-figcaption {
+  padding: 10px;
+  line-height: 1.5em;
+}
+
+.row-2 {
+  @include mq-medium-up {
+    width: 50%;
+    padding: 0 15px;
+  }
+}
+
+.row-2 * div.news-list-figcaption {
+  @include mq-medium-up {
+    font-size: 1.8em;
+  }
+}
+
+.row-2 img {
+  @include mq-medium-up {
+    max-height: 300px;
+  }
+}
+
+.row-3 {
+  @include mq-medium-up {
+    width: 33.3%;
+    padding: 15px;
+  }
+}
+
+.row-3 img {
+  @include mq-medium-up {
+    max-height: 250px;
+  }
+}
+
+/* slider bar is below this comment */
+
+
+.slider-bar-image-clip-box {
+  @include mq-medium {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  @include mq-medium-up {
+    width: 100%;
+    max-width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+  }
+}
+
+.slider-bar-title {
+  @include mq-medium {
+    padding: 10px;
+    font-size: 1.3em;
+    line-height: 1.5em;
+  }
+
+  @include mq-medium-up {
+    box-shadow: 0 0 8px 1px rgba(0,0,0,.2);
+    font-size: 2.4em;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: 20px;
+    border-radius: 5px;
+    background: #ffffff;
+    margin: 0 7%;
+    position: relative;
+    bottom: 80px;
+  }
+}
+
+.slider-bar-image-clip-box > img {
+  display: block;
+  width: 100%;
+}
