@@ -9,12 +9,37 @@ function ready() {
 
   console.log('DOM is loaded');
 
-  // 假的 cookie 狀態
   window.isLogin = 'no';
-  var cookie = {'token': '1a2b3c4d'};
-  // var cookie = {'token': ''};
+  // document.cookie = 'token = 1a2b3c4d';
 
-  if ( cookie.token !== null && cookie.token !== '' ) {
+  // 取得 cookie
+  function getCookie() {
+
+    var
+    cookie = {},
+    start = 0,
+    cookieArray = [],
+    cookieCount = 0;
+
+    if ( document.cookie !== '' && document.cookie !== null && document.cookie !== undefined ) {
+
+      cookieArray = document.cookie.split(';');
+      cookieCount = cookieArray.length;
+
+      for (start = 0; start < cookieCount; start++) {
+
+        var stringSplit = cookieArray[start].split('=');
+        cookie[stringSplit[0]] = stringSplit[1];
+      }
+
+    }
+
+    return cookie;
+  }
+
+  var cookie = getCookie();
+
+  if ( Object.keys(cookie).length !== 0 && cookie.token !== null && cookie.token !== '' ) {
 
     window.isLogin = 'yes';
   }
@@ -26,6 +51,7 @@ function ready() {
     btn_navSignup.style.display = 'none';
   }
 
+  console.log(`Cookie Token : ${cookie.token}`);
   console.log(`Current Login Status : ${window.isLogin}`);
 
 
