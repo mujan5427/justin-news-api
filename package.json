@@ -1,14 +1,16 @@
 {
   "name": "justin-news-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is Justin News's code, It was a awesome news platform for everyone in world !",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "babel": "babel ./static/js/source/ -w -d ./static/js/dist/babel/",
+    "webpack": "webpack --config webpack.config.js"
   },
-  "author": "",
+  "author": "Justin Ho",
   "license": "ISC",
   "dependencies": {
+    "babel-preset-env": "^1.4.0",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "mysql": "^2.13.0"

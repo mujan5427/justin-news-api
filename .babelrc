@@ -1,0 +1,7 @@
+
+/* Babel is installed at globally */
+
+
+{
+  "presets": ["env"]
+}
